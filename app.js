@@ -10,7 +10,9 @@ const _ = require("lodash");
 
 // mongoose.connect("mongodb://localhost:27017/todolistDB", { family: 4 }).then(() => console.log("Database Connection succeed"));
 
-mongoose.connect(process.env.MONGO_CONNECTION_STRING, { family: 4 }).then(() => console.log("Database Connection succeed"));
+// mongoose.connect(process.env.MONGO_CONNECTION_STRING, { family: 4 }).then(() => console.log("Database Connection succeed"));
+
+mongoose.connect(process.env.MONGO_CONNECTION_STRING).then(() => console.log("Database Connection succeed"));
 
 const itemsSchema = {
     name: String,
